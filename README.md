@@ -1,4 +1,4 @@
 # induction-plan
 Induction Projects
 <br>
-Author - Jack R. 
+Author - Jack R. Thorat
