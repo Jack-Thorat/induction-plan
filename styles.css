@@ -7,11 +7,6 @@ body {
   flex-direction: column;
 }
 
-header {
-  padding: 20px;
-  text-align: center;
-}
-
 main {
   flex: 1;
   display: flex;
