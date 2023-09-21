@@ -1,0 +1,50 @@
+// validation.js
+
+// Function to validate the email format
+function isValidEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+// Function to validate the password
+function isValidPassword(password) {
+  // Add your password validation logic here
+  // For example, you can check if the password has a minimum length
+  return password.length >= 6; // Minimum length of 6 characters
+}
+
+// Function to handle form submission
+function handleSubmit() {
+  const emailInput = document.getElementById("email");
+  const passwordInput = document.getElementById("password");
+  const emailError = document.getElementById("email-error");
+  const passwordError = document.getElementById("password-error");
+
+  const email = emailInput.value;
+  const password = passwordInput.value;
+
+  // Clear any previous error messages
+  emailError.textContent = "";
+  passwordError.textContent = "";
+
+  // Validate email and password
+  if (!isValidEmail(email)) {
+    emailError.textContent = "Invalid email format";
+    return;
+  }
+
+  if (!isValidPassword(password)) {
+    passwordError.textContent = "Password must be at least 6 characters";
+    return;
+  }
+
+  // If both email and password are valid, you can proceed with form submission
+  // For now, we'll just display a success message
+  alert("Login successful!");
+}
+
+// Add an event listener to the form submit button
+document.addEventListener("DOMContentLoaded", function () {
+  const loginButton = document.querySelector(".login-button");
+  loginButton.addEventListener("click", handleSubmit);
+});

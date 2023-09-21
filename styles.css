@@ -60,6 +60,7 @@ input {
   padding: 10px;
   border-radius: 3px;
   cursor: pointer;
+  border:none;
 }
 
 .google-button {
@@ -73,6 +74,7 @@ input {
   cursor: pointer;
   margin-top: 10px;
   margin-bottom: 50px;
+  border:none;
 }
 
 .google-icon {
@@ -105,7 +107,7 @@ a {
 
 .forgot-password {
   margin-left: 10px;
-  color: #666;
+  color: #665;
   font-size: 14px;
 }
 
@@ -113,4 +115,18 @@ a {
   font-size: 14px;
   font-weight: 200;
   margin: 1px 0 10px;
+}
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+@media screen and (max-width:600px){
+main{
+flex-direction:column;
+}
+.hero{
+order:-1;
+}
 }
